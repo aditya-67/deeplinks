@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <title>Customer Details | Maesh Express Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="checkout_style.css">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+</head>
+
+<body>
+    <div style="padding:15px;">
+        <div class="checkout-left">
+          <div class="col-md-6 col-md-offset-3">
+
+            <h4 style="text-align: center;">Customer Details</h4>
+            <div style="margin:1em 0em;">
+              <button class="btn btn-primary" id="prefill-correct">Prefill Details</button>
+            </div>
+            <form method="POST" class="creditly-card-form agileinfo_form" id="order-details">
+              <section class="creditly-wrapper wrapper">
+                <div class="information-wrapper">
+                  <div class="first-row form-group">
+                    <div class="controls">
+                      <label class="control-label">Full name: </label>
+                      <input class="billing-address-name form-control" type="text" name="name" placeholder="Full name" required id="name">
+                    </div>
+                    <div class="controls">
+                      <label class="control-label">Email Address: </label>
+                      <input class="billing-address-name form-control" type="text" name="email" placeholder="Email Address" required id="email">
+                    </div>
+                    <div class="card_number_grids">
+                      <div class="card_number_grid_right">
+                        <div class="controls">
+                          <label class="control-label">Landmark: </label>
+                          <input class="form-control" type="text" name="landmark" placeholder="Landmark" id="address">
+                        </div>
+                      </div>
+                      <div class="clear"> </div>
+                    </div>
+                    <div class="controls">
+                      <label class="control-label">Town/City: </label>
+                      <input class="form-control" type="text" name="city" placeholder="Town/City" id="city">
+                    </div>
+                  </div>
+                  <button class="submit check_out">Pay S$<span id="display_amount"></span></button>
+                </div>
+              </section>
+              <input type="hidden" name="sku" value="" id="sku" />
+              <input type="hidden" name="quantity" value="" id="quantity" />
+              <input type="hidden" name="amount" value="" id="amount" />
+            </form>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../js/constants.js"></script>
+  <script type="text/javascript">
+    document.getElementById('order-details').action = request_url + '/order-details';
+  </script>
+  <script type="text/javascript" src="checkout_main.js"></script>
+
+</body>
+
+</html>

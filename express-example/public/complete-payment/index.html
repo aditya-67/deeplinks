@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>PayNow QR</title>
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="product-item">
+			<div class="product-tile-footer">
+				<div class="product-title">
+					Enter amount and platform bill ID to complete payment
+				</div>
+				<div class="cart-action" style="float: none">
+					<input
+						type="number"
+						class="amount"
+						name="amount"
+						value=""
+						size="50"
+						id="amount"
+						placeholder="Amount"
+					/>
+					<input
+						type="text"
+						class="upiID amount"
+						name="upiID"
+						value=""
+						size="50"
+						id="upiID"
+						placeholder="Platform Bill ID"
+					/>
+					<button class="btnAddAction" id="complete-payment">
+						Complete Payment
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="status" style="float: left">
+			Payment Status response (Illustration purpose)
+			<pre id="payment-status"></pre>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/constants.js"></script>
+	<script src="main.js"></script>
+</html>

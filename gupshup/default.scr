@@ -1,0 +1,7 @@
+[main]
+	Hello there. This is Setu UPI support bot. :continue
+		You can type 'help' to get all commands you can use.
+
+			help
+				To generate an UPI payment link for Rs. X, type "payment-link X" :continue
+					To check payment status of a bill with ID Y, type "payment-status Y"

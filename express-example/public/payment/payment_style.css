@@ -1,0 +1,261 @@
+.cards .card.active {
+  box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+  -ms-box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+  -webkit-box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+  -o-box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+  -moz-box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+}
+
+.card {
+  border: 1px solid #DFE5EB;
+  min-height: 96px;
+  max-height: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 36px;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  position: relative;
+}
+
+.ease,
+.stepCount,
+.stepCount.active,
+.stepCount.done,
+.plan object,
+.plan object img,
+.detPurchase,
+.marg,
+.second,
+.viewed,
+.card,
+.card:after,
+.card:hover:after,
+.card:hover {
+  -webkit-transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.easeFast,
+a:hover,
+.stepHeader h3 span h3 a,
+.stepHeader h3 span h3 a:hover,
+.plan button,
+.plan button:hover,
+.detPrice button,
+.detPrice button:hover,
+.detSubmit button,
+.detSubmit button:hover,
+.radio input[type="radio"]+.radio-label,
+.radio input[type="radio"]:checked+.radio-label:before {
+  -webkit-transition: all 230ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 230ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.plan.product:hover object {
+  opacity: 1;
+}
+
+.radio {
+  z-index: 999991;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio input[type="radio"]+.radio-label {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 96px;
+  width: 100%;
+}
+
+.radio input[type="radio"]+.radio-label:hover {
+  cursor: pointer;
+}
+
+.radio input[type="radio"]+.radio-label div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.radio input[type="radio"]+.radio-label h3 {
+  margin: 0 0 6px 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.radio input[type="radio"]+.radio-label p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.radio input[type="radio"]+.radio-label:before {
+  content: '';
+  background: white;
+  border-radius: 100%;
+  border: 1px solid #1bc1a1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin-right: 18px;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.radio input[type="radio"]:focus+.radio-label:before {
+  outline: none;
+  border-color: #1bc1a1;
+}
+
+.radio input[type="radio"]:hover+.radio-label:before {
+  background-color: #DAEFFE;
+  box-shadow: inset 0 0 0 0px white;
+}
+
+.radio input[type="radio"]:active+.radio-label:before {
+  background-color: #95c9f5;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.radio input[type="radio"]:checked+.radio-label:before {
+  background-color: #1bc1a1;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.radio input[type="radio"]:disabled+.radio-label:before {
+  box-shadow: inset 0 0 0 4px #f4f4f4;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+
+.radio input[type="radio"]+.radio-label:empty:before {
+  margin-right: 0;
+}
+
+
+/**********/
+@import 'https://fonts.googleapis.com/css?family=Quantico';
+
+.add-card {
+  font-family: Quantico;
+}
+
+.saved-card {
+  font-family: Quantico;
+  min-height: 290px;
+  position: relative;
+}
+
+.saved-card .number,
+.saved-card .name {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.saved-card .cvv {
+  width: 30%;
+  float: left;
+}
+
+.saved-card .expiry {
+  width: 65%;
+  margin-right: 5%;
+  float: left;
+}
+
+.saved-card .number,
+.saved-card .name,
+.saved-card .cvv,
+.saved-card .expiry {
+  border-bottom: 1px solid #EDEDED;
+  padding: 5px 0 10px 15px;
+}
+
+.saved-card label {
+  font-family: sans-serif;
+}
+
+.saved-card span {
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  display: inline-block;
+}
+
+.saved-card .action-icon {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+}
+
+.saved-card .action-icon a {
+  float: left;
+  margin: 0px 5px;
+}
+
+.saved-card .action-icon a.text-oringe {
+  color: orange;
+}
+
+.saved-card .action-icon a.text-red {
+  color: #eb001b;
+}
+
+.editCard {
+  display: none;
+  background: #fff;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+}
+
+.paypall,
+.cashondelivery,
+.authorize,
+.maesh {
+  display: none;
+}

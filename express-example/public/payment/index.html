@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Checkout | Express Example</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="payment_style.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-header">
+      <h2>Select Your Payment Method</h2>
+    </div>
+    <div class="row">
+
+      <div class="col-md-5">
+        <!--col-md-offset-3-->
+        <div class="stepDetails">
+          <div class="cards">
+            <div class="card active" data-class="mycard">
+              <div class="radio">
+                <input id="radio-1" name="radio" type="radio" checked>
+                <label for="radio-1" class="radio-label">
+                  <div>
+                    <h3>My Saved Card</h3>
+                    <p>XXXX-8357</p>
+                  </div>
+                </label>
+              </div>
+              <span>
+                <svg width="54px" height="36px" viewBox="0 0 54 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs>
+                    <rect id="path-1" x="0" y="0" width="54" height="36" rx="4"></rect>
+                  </defs>
+                  <g id="Sketches-&amp;-Archive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Quick-PP-/-Sticky-Details-/-Cycle-Selected" transform="translate(-648.000000, -582.000000)">
+                      <g id="Group-18" transform="translate(84.000000, 450.000000)">
+                        <g id="Step-#2---Cycle-[collapsed]">
+                          <g id="Saved-card-" transform="translate(66.000000, 102.000000)">
+                            <g id="Payment-Frame" transform="translate(36.000000, 27.000000)">
+                              <g id="Group-9">
+                                <g id="payment-cc-icon-mastercard" transform="translate(462.000000, 3.000000)">
+                                  <g id="Layer_1">
+                                    <g id="Rectangle-6">
+                                      <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                      <rect stroke="#E3EBF1" stroke-width="1" x="0.5" y="0.5" width="53" height="35"
+                                        rx="4"></rect>
+                                    </g>
+                                    <g id="Group" transform="translate(12.000000, 6.000000)" fill-rule="nonzero">
+                                      <path
+                                        d="M5.71325978,23.7661172 L5.71325978,22.2008405 C5.71325978,21.6008178 5.34802856,21.2094986 4.7219179,21.2094986 C4.40886257,21.2094986 4.0697193,21.3138504 3.8349278,21.6529937 C3.65231219,21.3660263 3.39143275,21.2094986 3.00011358,21.2094986 C2.73923414,21.2094986 2.4783547,21.2877625 2.26965115,21.5747299 L2.26965115,21.2616745 L1.72180432,21.2616745 L1.72180432,23.7661172 L2.26965115,23.7661172 L2.26965115,22.3834561 C2.26965115,21.9399611 2.50444264,21.7312575 2.86967386,21.7312575 C3.23490508,21.7312575 3.41752069,21.966049 3.41752069,22.3834561 L3.41752069,23.7661172 L3.96536752,23.7661172 L3.96536752,22.3834561 C3.96536752,21.9399611 4.22624696,21.7312575 4.56539024,21.7312575 C4.93062146,21.7312575 5.11323707,21.966049 5.11323707,22.3834561 L5.11323707,23.7661172 L5.71325978,23.7661172 Z M13.8266104,21.2616745 L12.9396203,21.2616745 L12.9396203,20.5051242 L12.3917735,20.5051242 L12.3917735,21.2616745 L11.8961026,21.2616745 L11.8961026,21.7573455 L12.3917735,21.7573455 L12.3917735,22.905215 C12.3917735,23.4791498 12.626565,23.8182931 13.2526757,23.8182931 C13.4874672,23.8182931 13.7483466,23.7400292 13.9309622,23.6356775 L13.7744345,23.1660945 C13.6179069,23.2704462 13.4352913,23.2965342 13.3048515,23.2965342 C13.0439721,23.2965342 12.9396203,23.1400065 12.9396203,22.8791271 L12.9396203,21.7573455 L13.8266104,21.7573455 L13.8266104,21.2616745 Z M18.4702645,21.2094986 C18.1572092,21.2094986 17.9485056,21.3660263 17.8180659,21.5747299 L17.8180659,21.2616745 L17.2702191,21.2616745 L17.2702191,23.7661172 L17.8180659,23.7661172 L17.8180659,22.3573682 C17.8180659,21.9399611 18.0006815,21.7051696 18.3398248,21.7051696 C18.4441766,21.7051696 18.5746163,21.7312575 18.6789681,21.7573455 L18.8354957,21.2355866 C18.7311439,21.2094986 18.5746163,21.2094986 18.4702645,21.2094986 L18.4702645,21.2094986 Z M11.4526075,21.4703781 C11.1917281,21.2877625 10.8264968,21.2094986 10.4351777,21.2094986 C9.80906703,21.2094986 9.39165992,21.522554 9.39165992,22.0182249 C9.39165992,22.435632 9.70471525,22.6704235 10.2525621,22.7486874 L10.5134415,22.7747753 C10.8004089,22.8269512 10.9569366,22.905215 10.9569366,23.0356547 C10.9569366,23.2182704 10.748233,23.3487101 10.3830018,23.3487101 C10.0177706,23.3487101 9.73080319,23.2182704 9.54818758,23.0878306 L9.28730814,23.5052377 C9.57427553,23.7139413 9.96559469,23.8182931 10.3569139,23.8182931 C11.0873763,23.8182931 11.5047834,23.4791498 11.5047834,23.0095668 C11.5047834,22.5660717 11.1656401,22.3312802 10.6438812,22.2530164 L10.3830018,22.2269285 C10.1482103,22.2008405 9.96559469,22.1486646 9.96559469,21.992137 C9.96559469,21.8095214 10.1482103,21.7051696 10.4351777,21.7051696 C10.748233,21.7051696 11.0612883,21.8356093 11.217816,21.9138731 L11.4526075,21.4703781 Z M26.0096804,21.2094986 C25.6966251,21.2094986 25.4879215,21.3660263 25.3574818,21.5747299 L25.3574818,21.2616745 L24.8096349,21.2616745 L24.8096349,23.7661172 L25.3574818,23.7661172 L25.3574818,22.3573682 C25.3574818,21.9399611 25.5400974,21.7051696 25.8792407,21.7051696 C25.9835924,21.7051696 26.1140322,21.7312575 26.2183839,21.7573455 L26.3749116,21.2355866 C26.2705598,21.2094986 26.1140322,21.2094986 26.0096804,21.2094986 L26.0096804,21.2094986 Z M19.0181113,22.5138959 C19.0181113,23.2704462 19.5398702,23.8182931 20.3485965,23.8182931 C20.7138277,23.8182931 20.9747071,23.7400292 21.2355866,23.5313257 L20.9747071,23.0878306 C20.7660036,23.2443583 20.5573,23.3226221 20.3225085,23.3226221 C19.8790135,23.3226221 19.5659582,23.0095668 19.5659582,22.5138959 C19.5659582,22.0443129 19.8790135,21.7312575 20.3225085,21.7051696 C20.5573,21.7051696 20.7660036,21.7834334 20.9747071,21.9399611 L21.2355866,21.496466 C20.9747071,21.2877625 20.7138277,21.2094986 20.3485965,21.2094986 C19.5398702,21.2094986 19.0181113,21.7573455 19.0181113,22.5138959 L19.0181113,22.5138959 Z M24.0791725,22.5138959 L24.0791725,21.2616745 L23.5313257,21.2616745 L23.5313257,21.5747299 C23.3487101,21.3399384 23.0878306,21.2094986 22.7486874,21.2094986 C22.0443129,21.2094986 21.496466,21.7573455 21.496466,22.5138959 C21.496466,23.2704462 22.0443129,23.8182931 22.7486874,23.8182931 C23.1139186,23.8182931 23.374798,23.6878533 23.5313257,23.4530618 L23.5313257,23.7661172 L24.0791725,23.7661172 L24.0791725,22.5138959 Z M22.0704008,22.5138959 C22.0704008,22.0704008 22.3573682,21.7051696 22.8269512,21.7051696 C23.2704462,21.7051696 23.5835016,22.0443129 23.5835016,22.5138959 C23.5835016,22.9573909 23.2704462,23.3226221 22.8269512,23.3226221 C22.3573682,23.2965342 22.0704008,22.9573909 22.0704008,22.5138959 L22.0704008,22.5138959 Z M15.5223268,21.2094986 C14.7918644,21.2094986 14.2701055,21.7312575 14.2701055,22.5138959 C14.2701055,23.2965342 14.7918644,23.8182931 15.5484148,23.8182931 C15.913646,23.8182931 16.2788772,23.7139413 16.5658446,23.4791498 L16.3049651,23.0878306 C16.0962616,23.2443583 15.8353821,23.3487101 15.5745027,23.3487101 C15.2353594,23.3487101 14.8962161,23.1921824 14.8179523,22.7486874 L16.6701964,22.7486874 L16.6701964,22.5399838 C16.6962843,21.7312575 16.2267013,21.2094986 15.5223268,21.2094986 L15.5223268,21.2094986 Z M15.5223268,21.6790816 C15.8614701,21.6790816 16.0962616,21.8877852 16.1484375,22.2791044 L14.8440403,22.2791044 C14.8962161,21.9399611 15.1310076,21.6790816 15.5223268,21.6790816 L15.5223268,21.6790816 Z M29.1141457,22.5138959 L29.1141457,20.2703327 L28.5662989,20.2703327 L28.5662989,21.5747299 C28.3836833,21.3399384 28.1228039,21.2094986 27.7836606,21.2094986 C27.0792861,21.2094986 26.5314393,21.7573455 26.5314393,22.5138959 C26.5314393,23.2704462 27.0792861,23.8182931 27.7836606,23.8182931 C28.1488918,23.8182931 28.4097713,23.6878533 28.5662989,23.4530618 L28.5662989,23.7661172 L29.1141457,23.7661172 L29.1141457,22.5138959 Z M27.105374,22.5138959 C27.105374,22.0704008 27.3923414,21.7051696 27.8619244,21.7051696 C28.3054195,21.7051696 28.6184748,22.0443129 28.6184748,22.5138959 C28.6184748,22.9573909 28.3054195,23.3226221 27.8619244,23.3226221 C27.3923414,23.2965342 27.105374,22.9573909 27.105374,22.5138959 L27.105374,22.5138959 Z M8.7916372,22.5138959 L8.7916372,21.2616745 L8.24379037,21.2616745 L8.24379037,21.5747299 C8.06117476,21.3399384 7.80029532,21.2094986 7.46115205,21.2094986 C6.75677755,21.2094986 6.20893072,21.7573455 6.20893072,22.5138959 C6.20893072,23.2704462 6.75677755,23.8182931 7.46115205,23.8182931 C7.82638326,23.8182931 8.08726271,23.6878533 8.24379037,23.4530618 L8.24379037,23.7661172 L8.7916372,23.7661172 L8.7916372,22.5138959 Z M6.75677755,22.5138959 C6.75677755,22.0704008 7.04374494,21.7051696 7.51332793,21.7051696 C7.95682299,21.7051696 8.26987832,22.0443129 8.26987832,22.5138959 C8.26987832,22.9573909 7.95682299,23.3226221 7.51332793,23.3226221 C7.04374494,23.2965342 6.75677755,22.9573909 6.75677755,22.5138959 Z"
+                                        id="XMLID_1775_" fill="#000000"></path>
+                                      <g id="XMLID_328_">
+                                        <rect id="Rectangle-path" fill="#FF5F00" x="11.2699919" y="2.2435632"
+                                          width="8.21770243" height="14.7657764"></rect>
+                                        <path
+                                          d="M11.7917508,9.62645142 C11.7917508,6.62633783 13.2004998,3.96536752 15.3657991,2.2435632 C13.7744345,0.99134188 11.7656628,0.234791498 9.57427553,0.234791498 C4.38277463,0.234791498 0.18261561,4.43495052 0.18261561,9.62645142 C0.18261561,14.8179523 4.38277463,19.0181113 9.57427553,19.0181113 C11.7656628,19.0181113 13.7744345,18.261561 15.3657991,17.0093396 C13.2004998,15.3136233 11.7917508,12.626565 11.7917508,9.62645142 Z"
+                                          id="XMLID_330_" fill="#EB001B"></path>
+                                        <path
+                                          d="M30.5750706,9.62645142 C30.5750706,14.8179523 26.3749116,19.0181113 21.1834107,19.0181113 C18.9920234,19.0181113 16.9832517,18.261561 15.3918871,17.0093396 C17.5832744,15.2875353 18.9659354,12.626565 18.9659354,9.62645142 C18.9659354,6.62633783 17.5571865,3.96536752 15.3918871,2.2435632 C16.9832517,0.99134188 18.9920234,0.234791498 21.1834107,0.234791498 C26.3749116,0.234791498 30.5750706,4.46103846 30.5750706,9.62645142 Z"
+                                          id="Shape" fill="#F79E1B"></path>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </div>
+
+            <div class="card" data-class="authorize">
+              <div class="radio">
+                <input id="radio-3" name="radio" type="radio">
+                <label for="radio-3" class="radio-label">
+                  authorize.net
+                  <!--American Express   Diners Club   Discover   JCB    Mastercard    Visa-->
+                </label>
+              </div>
+              <img src="images/authorize-.png" style="width: 17%;float: right;" />
+            </div>
+            <div class="card" data-class="paypall">
+              <div class="radio">
+                <input id="radio-2" name="radio" type="radio">
+                <label for="radio-2" class="radio-label">Pay with any UPI app</label>
+              </div>
+              <img src="https://www.searchpng.com/wp-content/uploads/2019/01/Bhim-PNG-Icon.png" style="width: 17%;float: right;" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-7">
+        <div class="border">
+          <div class="action">
+            <div class="mycard">
+              <div class="form signin-up">
+                <div class="form-header">
+                  <h2>Your Saved Card</h2>
+                </div>
+                <div class="saved-card">
+                  <form class="login editCard hide">
+                    <div class="form-group">
+                      <label for="username">CARD HOLDER NAME</label>
+                      <input type="text" id="#" name="username" required="required" placeholder="Mudassar Hussain" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">CARD NUMBER</label>
+                      <input type="text" id="#" name="cardNumber" required="required"
+                        placeholder=" * * * *  * * * *  * * * *  1234" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">EXPIRY DATE</label>
+                      <input type="text" id="#" name="expiryDate" required="required" placeholder="10 / 5 / 2017" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">CVV NUMBER</label>
+                      <input type="text" id="#" name="cvvNumber" required="required" placeholder=" * * * " />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-remember">
+                        <input type="checkbox" />auto update my package
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <a href="#" class="btn btn-black-galacy">Update</a>
+                      <a href="#" class="btn btn-black-galacy editcardForm">Cancel</a>
+                    </div>
+                  </form>
+                  <div class="name">
+                    <label>CARD HOLDER NAME</label>
+                    <span>Mudassar Hussain</span>
+                  </div>
+                  <div class="number">
+                    <label>CARD NUMBER</label>
+                    <span>**** **** **** 7678</span>
+                  </div>
+                  <div class="expiry">
+                    <label>EXPIRY DATE</label>
+                    <span> 10 / 5</span>
+                  </div>
+                  <div class="cvv">
+                    <label>CVV</label>
+                    <span>***</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="authorize">
+              <div class="form signin-up">
+                <div class="form-header">
+                  <h1>Authorize.Net</h1>
+                </div>
+                <div class="saved-card">
+                  <div class="action-icon">
+                    <a class="text-oringe editcardForm" href="#" data-placement="top" data-toggle="tooltip"
+                      title="Edit">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a class="text-red" href="#" data-toggle="tooltip" data-uid="1" title="delete">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </div>
+                  <div class="name">
+                    <label>CARD HOLDER NAME</label>
+
+                  </div>
+                  <div class="number">
+                    <label>CARD NUMBER</label>
+
+                  </div>
+                  <div class="expiry">
+                    <label>EXPIRY DATE</label>
+
+                  </div>
+                  <div class="cvv">
+                    <label>CVV</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paypall">
+              <div class="form">
+                <div class="form-header">
+                  <h1>Pay with any UPI app</h1>
+                </div>
+                <button class="btn btn-green btn-lg" id="upi-pay">Place Order</button>
+              </div>
+              <div id="upi-links" style="display: none;">
+                <a class="btn btn-green btn-lg" href="#" id="click-to-pay" target="_blank">Click here to pay</a><br/>
+                Payment Link response (Illustration purpose)
+                <pre id="payment-link">
+                </pre>
+                Payment Status response (Illustration purpose)
+                <pre id="payment-status">
+                </pre>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../js/constants.js"></script>
+  <script type="text/javascript">
+    document.getElementById('place-order-form').action = 'http://localhost:5000/upi-pay';
+  </script>
+  <script src="payment_main.js"></script>
+</body>
+
+</html>

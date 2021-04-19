@@ -1,0 +1,20 @@
+{
+  "name": "Maesh Express Example",
+  "description": "Online webstore with Maesh integrated for Express",
+  "keywords": [
+    "maesh",
+    "node",
+    "nodejs",
+    "express",
+    "webstore"
+  ],
+  "website": "https://maesh.io",
+  "repository": "https://github.com/maesh-payment/maesh-express-example",
+  "logo": "https://raw.githubusercontent.com/maesh-payment/maesh-express-example/main/public/favicon.png",
+  "env": {
+    "MAESH_TESTING_API_KEY": {
+      "description": "Your Maesh Testing API key",
+      "required": true
+    }
+  }
+}

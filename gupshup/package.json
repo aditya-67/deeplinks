@@ -1,0 +1,21 @@
+{
+  "name": "upisetu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./node_modules/gupshup-botrunner/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/gupshup-local-botrunner/index.js",
+    "deploy": "node ./node_modules/gupshup-local-botrunner/deploy.js"
+  },
+  "author": {
+    "name": "Aditya",
+    "email": "adityagannavarapu.67@gmail.com",
+    "url": ""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bot-script": "^3.6.4",
+    "gupshup-local-botrunner": "^1.4.8"
+  }
+}
